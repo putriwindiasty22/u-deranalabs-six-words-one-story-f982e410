@@ -6,7 +6,9 @@
 
 **Six words, one story** — a whole life in a single line. `main.ts` (Node 22, no network, no dependencies) writes the story to `/output/entry.txt` (falling back to `./output/entry.txt` when run locally).
 
-The story is about a ticket kept and a person gone. Two short sentences, six words: the first suggests a journey planned together, the second quietly ends it — the ticket outlives the trip. The reader is left to fill in what the ticket was for, why she left, and what he does with it now.
+The story is about a ticket kept and a person gone. Two short sentences, six words: the first suggests a journey planned together, the second quietly ends it — the ticket outlives the trip. The reader is left to fill in what the ticket was for, why she left, and what he does with it now. The turn is the contrast between keeping and leaving: he holds on to the plan while she walks away from it.
+
+The entry validates the story before writing it: exactly six words, inside the gate's 1–60 character window, with no trailing newline, so the file the judge reads is exactly the story and nothing else.
 
 ## Run it
 
@@ -14,7 +16,11 @@ The story is about a ticket kept and a person gone. Two short sentences, six wor
 node main.ts
 ```
 
-Then read `output/entry.txt` (or `/output/entry.txt` in the grading sandbox).
+Then read `output/entry.txt` (or `/output/entry.txt` in the grading sandbox). It should contain exactly:
+
+```
+He kept the ticket. She left.
+```
 
 ---
 
